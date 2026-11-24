@@ -1,7 +1,7 @@
-# A program to print boxes
+# A program to print boxes to the command line
 
 
-def is_edge(i, j, dims):
+def is_edge(x, y, dims):
     """Determine if cell (x, y) is on the edge of the box described by dims
 
     Args:
@@ -12,10 +12,10 @@ def is_edge(i, j, dims):
     Returns:
       bool: True if cell (x, y) is on the edge of the box, otherwise false
     """
-    if i == 0 or j == 0:
+    if x == 0 or y == 0:
         return True
 
-    if i == dims[0] - 1 or j == dims[1] - 1:
+    if x == dims[0] - 1 or y == dims[1] - 1:
         return True
 
     return False
@@ -41,6 +41,7 @@ def print_box(width, height):
     print(out, end="")
 
 
+# main: take user input for dimensions of box to print
 def main():
     while True:
         try:
